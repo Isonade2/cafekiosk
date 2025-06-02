@@ -12,7 +12,6 @@ import static org.assertj.core.api.Assertions.*;
 
 
 class CafeKioskTest {
-
     @Test
     void add_manual_test() {
         CafeKiosk cafeKiosk = new CafeKiosk();
