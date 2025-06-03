@@ -1,18 +1,21 @@
 package sample.cafekiosk.spring.api;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 
 
-
+@Getter
+@NoArgsConstructor
 public class ApiResponse<T> {
     private int code;
-    private HttpStatus httpStatus;
+    private HttpStatus status;
     private String message;
     private T data;
 
-    public ApiResponse(HttpStatus httpStatus, String message, T data) {
-        this.code = httpStatus.value();
-        this.httpStatus = httpStatus;
+    public ApiResponse(HttpStatus status, String message, T data) {
+        this.code = status.value();
+        this.status = status;
         this.message = message;
         this.data = data;
     }
