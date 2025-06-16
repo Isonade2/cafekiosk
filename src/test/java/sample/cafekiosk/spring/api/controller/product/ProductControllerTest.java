@@ -55,7 +55,7 @@ class ProductControllerTest {
         ResultActions perform = mockMvc.perform(post("/api/v1/products/new")
                 .content(objectMapper.writeValueAsString(request))
                 .contentType(MediaType.APPLICATION_JSON))
-                //.andDo(print())
+                .andDo(print())
                 .andExpect(status().isOk());
     }
 
